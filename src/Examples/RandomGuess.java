@@ -8,11 +8,14 @@ public class RandomGuess {
 
         Scanner input = new Scanner(System.in);
         Random rand = new Random();
-        int choice = 10;
-        int rand_pick = rand.nextInt(10) + 1;
+        int choice = 100;
+        int rand_pick = rand.nextInt(99) + 1;
+        int count = 0;
 
         while (choice != rand_pick) {
-            System.out.println("Pick a number between 1 and 10");
+
+
+            System.out.println("\n Pick a number between 1 and 100");
             choice = input.nextInt();
 
             if (choice == rand_pick) {
@@ -22,6 +25,9 @@ public class RandomGuess {
             } else if (choice < rand_pick) {
                 System.out.println("Higher");
             }
+            System.out.println("# of guesses [" + count + "]");
+            count++;
         }
+        System.out.println("it took you " + count + " tries to guess the number");
     }
 }

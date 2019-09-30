@@ -36,7 +36,7 @@ public class TestScoreStatistics {
         }
         avg = scoreTotal/numOfEntries;
 
-        System.
+        System.out.println(high + " " + low + " " + avg);
 
     }
 }
